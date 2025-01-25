@@ -29,10 +29,10 @@ public class Bubble : MonoBehaviour
     public void Inflate(float inflationRate)
     {
         
-        size += inflationRate;
+        size += inflationRate * Time.deltaTime;
         
     }
-    
+        
 
 
     private void Pop()

@@ -14,7 +14,7 @@ public class BubbleInflator : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        Debug.unityLogger.Log("Inflation");
+        Debug.Log("Inflation");
         bubble.Inflate(Inflationrate);
     }
 

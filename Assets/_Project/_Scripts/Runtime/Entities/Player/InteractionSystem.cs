@@ -35,7 +35,7 @@ public class InteractionSystem : MonoBehaviour
                 interactable = hitinfo.collider.gameObject;
                 
                 interactable.GetComponent<IInteractable>().BeginInteraction();
-                if (interactAction.WasPressedThisFrame())
+                if (interactAction.IsPressed())
                 {
                     
                     interactable.GetComponent<IInteractable>().Interact();

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 387230b660fb8cf4db20ea15a8930c02, type: 3}
+  m_Name: DoubleBubble
+  m_EditorClassIdentifier: 
+  RecipeName: DoubleBubble
+  hashID: -1409043112
+  ingredient1: {fileID: 0}
+  ingredient2: {fileID: 0}
+  ingredient3: {fileID: 0}
+  ingredient4: {fileID: 0}
+  Liquid: {fileID: 11400000, guid: 6b1dca90ae7998e4f8a8a8637c227eb1, type: 2}
+  Solid: {fileID: 11400000, guid: 9ddcf95cddeb0914ab0e259b32c9ad85, type: 2}
+  Air: {fileID: 11400000, guid: 8ed684c1a9671d54cbdde8253b918885, type: 2}

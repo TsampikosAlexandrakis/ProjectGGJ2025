@@ -4,9 +4,14 @@ using UnityEngine;
 public class OrderSO : ScriptableObject
 {
     public string name;
-    public RecipeOrder[] recipe;
-    public GameObject bubblePrefab;
+    public RecipeOrder[] Bubbles;
     public float expirationTime;
+    
+    [Header("Settings")]
+    public string Name;
+    public float ScoreMult;
+    public float Coins;
+    
 }
 
 [System.Serializable]

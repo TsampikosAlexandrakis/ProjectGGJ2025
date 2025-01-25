@@ -39,7 +39,7 @@ public class OrderManager : MonoBehaviour
     public void NextOrder()
     {
         orderCounter++;
-        if (pendingOrders.Count >= orderCounter)
+        if ( orderCounter >= pendingOrders.Count)
         {
             NoOrders();
             return;

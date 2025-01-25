@@ -15,4 +15,4 @@ MonoBehaviour:
   hashID: -604201745
   Name: Oxygen
   IngredientIcon: {fileID: 0}
-  IngredientType: 0
+  IngredientType: 2

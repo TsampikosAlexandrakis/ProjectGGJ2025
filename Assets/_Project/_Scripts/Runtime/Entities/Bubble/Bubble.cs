@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class Bubble : MonoBehaviour
 {
+    [Header("Data")]
+    public RecipeSO bubbleRecipe; 
+    
     public float minSize;
     public float maxSize;
     
@@ -32,11 +35,10 @@ public class Bubble : MonoBehaviour
         size += inflationRate;
         
     }
-    
-
 
     private void Pop()
     {
         Destroy(gameObject);
     }
+    
 }

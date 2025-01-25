@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using UnityEditor.Rendering;
 using UnityEngine;
 
 
@@ -14,7 +13,7 @@ public class OrderManager : MonoBehaviour
     public int score = 0;
     public Action OnOrderFailed;
     public Action OnOrderSuccess;
-
+    public Action<OrderSO> OnNewOrder;
     private void Awake()
     {
         if (Instance == null)
@@ -67,7 +66,7 @@ public class OrderManager : MonoBehaviour
     }
 
     private bool isRunning;
-    private float timer;
+    public float timer;
 
     private void Update()
     {
@@ -87,7 +86,15 @@ public class OrderManager : MonoBehaviour
     {
         isRunning = false;
         if (successful)
+        {
+            OnOrderSuccess?.Invoke();
             score++;
+        }
+        else
+        {
+            OnOrderFailed?.Invoke();
+        }
+            
         NextOrder();
     }
 }

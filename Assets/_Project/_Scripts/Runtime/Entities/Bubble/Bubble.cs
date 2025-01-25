@@ -5,7 +5,6 @@ public class Bubble : MonoBehaviour
     public float minSize;
     public float maxSize;
     
-    public float inflationSpeed;
     
     public float size;
     public bool Popped = false;
@@ -15,7 +14,6 @@ public class Bubble : MonoBehaviour
         {
             foreach(Transform child in transform)
             {
-                size += inflationSpeed * Time.deltaTime;
                 size = Mathf.Clamp(size, minSize, maxSize);
                 child.localScale = new Vector3(size, size, size);
             }
@@ -28,8 +26,15 @@ public class Bubble : MonoBehaviour
         }
     }
 
+    public void Inflate(float inflationRate)
+    {
+        
+        size += inflationRate;
+        
+    }
     
-    
+
+
     private void Pop()
     {
         Destroy(gameObject);

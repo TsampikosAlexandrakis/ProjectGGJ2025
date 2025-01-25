@@ -13,5 +13,12 @@ MonoBehaviour:
   m_Name: OrderSO
   m_EditorClassIdentifier: 
   name: 
-  recipe: {fileID: 0}
+  recipe:
+  - recipe:
+    - {fileID: 0}
+    amount: 0
+  - recipe:
+    - {fileID: 0}
+    amount: 0
   bubblePrefab: {fileID: 0}
+  expirationTime: 0

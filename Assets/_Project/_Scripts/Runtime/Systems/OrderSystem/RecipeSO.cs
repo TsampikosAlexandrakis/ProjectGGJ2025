@@ -9,7 +9,7 @@ public class RecipeSO : ScriptableObject
     //public float expirationTime;
     public string RecipeName;
     [SerializeField] private int hashID;
-
+    
     [Header("Ingredients")] 
     public IngredientSO ingredient1;
     public IngredientSO ingredient2;
@@ -29,9 +29,13 @@ public class RecipeSO : ScriptableObject
         return Liquid.IsEqual(pendingBubble.Liquid.GetHash()) && Solid.IsEqual(pendingBubble.Solid.GetHash()) && Air.IsEqual(pendingBubble.Air.GetHash());
     }
 
-    public void AddIngredient(IngredientSO ingredient, IngredientType type)
+    public void ForceGenID()
     {
-        switch ( type)
+        hashID = GenerateHashID();
+    }
+    public void AddIngredient(IngredientSO ingredient)
+    {
+        switch ( ingredient.IngredientType)
         {
             case IngredientType.Liquid:
                 Liquid = ingredient;

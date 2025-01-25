@@ -10,7 +10,7 @@ public class IngredientSO : ScriptableObject
     [SerializeField] private int hashID;
     public string Name;
     public Sprite IngredientIcon;
-   
+    public IngredientType IngredientType;
     public int GetHash() => hashID;
     private void OnValidate()
     {

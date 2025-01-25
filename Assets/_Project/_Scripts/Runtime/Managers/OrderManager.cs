@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEngine;
 
 
@@ -7,9 +8,9 @@ public class OrderManager : MonoBehaviour
 {
     public static OrderManager Instance;
     public OrderSetupSO OrderSetupSO;
-    private List<OrderSO> pendingOrders;
+    public List<OrderSO> pendingOrders = new List<OrderSO>();
     public OrderSO currentOrder;
-    public int orderCounter = 0;
+    public int orderCounter = -1;
     public int score = 0;
     public Action OnOrderFailed;
     public Action OnOrderSuccess;
@@ -22,9 +23,17 @@ public class OrderManager : MonoBehaviour
         }
     }
 
+    public void Start()
+    {
+        Init();
+    }
+
     public void Init()
     {
-        pendingOrders = OrderSetupSO.Orders;
+        Debug.Log("Hey");
+        pendingOrders = new List<OrderSO>();
+        pendingOrders.AddRange(OrderSetupSO.Orders);
+        NextOrder();
     }
 
     public void NextOrder()

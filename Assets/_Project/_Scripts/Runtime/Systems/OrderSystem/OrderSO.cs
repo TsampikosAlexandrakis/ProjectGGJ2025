@@ -5,7 +5,6 @@ public class OrderSO : ScriptableObject
 {
     public string name;
     public RecipeOrder[] Bubbles;
-    public GameObject bubblePrefab;
     public float expirationTime;
     
     [Header("Settings")]

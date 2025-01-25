@@ -15,4 +15,4 @@ MonoBehaviour:
   hashID: -776412286
   Name: Soap
   IngredientIcon: {fileID: 0}
-  IngredientType: 0
+  IngredientType: 1

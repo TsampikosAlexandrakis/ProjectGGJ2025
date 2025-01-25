@@ -9,10 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 557c6dff3717d924f87596725a9a2180, type: 3}
-  m_Name: Oxygen
+  m_Script: {fileID: 11500000, guid: f4a7b864d7649b540be27c811752b5a3, type: 3}
+  m_Name: Order_10_FML
   m_EditorClassIdentifier: 
-  hashID: -604201745
-  Name: Oxygen
-  IngredientIcon: {fileID: 0}
-  IngredientType: 2
+  name: 
+  Bubbles: []
+  bubblePrefab: {fileID: 0}
+  expirationTime: 0
+  Name: 
+  ScoreMult: 0
+  Coins: 0

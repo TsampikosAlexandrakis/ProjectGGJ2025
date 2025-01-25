@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: Order_3_Medium
   m_EditorClassIdentifier: 
   name: 
-  Bubbles: []
-  bubblePrefab: {fileID: 0}
-  expirationTime: 0
+  Bubbles:
+  - recipe: {fileID: 11400000, guid: b5da5115d82bd6b4b86186be2587ba87, type: 2}
+    amount: 2
+  - recipe: {fileID: 11400000, guid: f0d6faef2fcc2154297c58edb22f64e4, type: 2}
+    amount: 1
+  expirationTime: 45
   Name: 
-  ScoreMult: 0
-  Coins: 0
+  ScoreMult: 2
+  Coins: 12

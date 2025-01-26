@@ -27,7 +27,7 @@ public class BubbleInflator : MonoBehaviour, IInteractable
     {
         if (bubble != null)
         {
-            progressBar.fillAmount = bubble.size/bubble.maxSize;
+            progressBar.fillAmount = bubble.size/bubble.maxSize * Time.deltaTime;
         }
         
         

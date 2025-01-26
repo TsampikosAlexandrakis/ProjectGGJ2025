@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
     private Vector3 _lookVector;
     
     public static PlayerController instance;
+    
+    public Transform grabPoint;
 
     public enum PlayerState
     {

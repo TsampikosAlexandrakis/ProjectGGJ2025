@@ -40,7 +40,7 @@ public class MainUIHandler : MonoBehaviour
        foreach (var bubble in obj.Bubbles)
        {
            GameObject GO = Instantiate(reqUI, recipesLayoutGroup.transform);
-           GO.GetComponentInChildren<Image>().sprite = bubble.recipe.BubbleIcon;
+           GO.GetComponentsInChildren<Image>()[1].sprite = bubble.recipe.BubbleIcon;
            GO.GetComponentInChildren<TMP_Text>().text = $"x{bubble.amount}";
            //recipesText.text += $"{bubble.recipe.RecipeName} x{bubble.amount}";
        }

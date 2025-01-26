@@ -26,12 +26,20 @@ public class TestGrabable : MonoBehaviour, IGrabable
 
     public void Grab()
     {
-        IsGrabbed = true;
+        if (!isGrabbed)
+        {
+            IsGrabbed = true;
+        }
+        
     }
 
     public void Release()
     {
-        IsGrabbed = false;
+        if (isGrabbed)
+        {
+            IsGrabbed = false;
+        }
+        
     }
 
     

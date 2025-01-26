@@ -12,6 +12,26 @@ public class Stiring : MonoBehaviour,IInteractable
     
     public GameObject ladle;
     
+    public IngredientSO currentIngredient;
+
+    public void OnColliEnter(Collider other)
+    {
+        if (other.tag == "ingredient")
+        {
+            currentIngredient = other.GetComponent<IngredientSO>();
+        }
+    }
+
+    public void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "ingredient")
+        {
+            currentIngredient = other.gameObject.GetComponent<TestGrabable>().ingredient;
+            other.gameObject.SetActive(false);
+            PlayerController.instance.isHolding =false;
+        }
+    }
+
     public void BeginInteraction()
     {
         
@@ -42,7 +62,7 @@ public class Stiring : MonoBehaviour,IInteractable
 
     public void Finished()
     {
-        Debug.Log("Finished");
+        CraftManager.Instance.AddToPendingBubble(currentIngredient);
     }
     
     public void EndInteraction()

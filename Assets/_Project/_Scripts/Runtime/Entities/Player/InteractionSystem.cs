@@ -19,8 +19,11 @@ public class InteractionSystem : MonoBehaviour
 
     private void Update()
     {
+        if (!PlayerController.instance.isHolding)
+        {
+            InteractionHandler();
+        }
         
-        InteractionHandler();
         
     }
     

@@ -41,11 +41,13 @@ public class ObjectGrab : MonoBehaviour
                         grabableObject.GetComponent<IGrabable>().IsGrabbed = false;
                         grabableObject.GetComponent<IGrabable>().Release();
                         grabableObject = null;
+                        PlayerController.instance.isHolding = false;
                     }
                     if (grabableObject.GetComponent<IGrabable>().IsGrabbed == false)
                     {
                         grabableObject.GetComponent<IGrabable>().Grab();
                         grabableObject.GetComponent<IGrabable>().IsGrabbed = true;
+                        PlayerController.instance.isHolding = true;
                     }
                    
                 }

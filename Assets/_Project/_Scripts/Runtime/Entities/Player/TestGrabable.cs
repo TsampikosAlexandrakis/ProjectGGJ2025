@@ -8,6 +8,8 @@ public class TestGrabable : MonoBehaviour, IGrabable
     
     public bool isGrabbed = false;
 
+    public IngredientSO ingredient;
+    
     public bool IsGrabbed
     {
         get => isGrabbed;

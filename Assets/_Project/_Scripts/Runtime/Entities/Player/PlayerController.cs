@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
     
     public Transform grabPoint;
 
+    public bool isHolding;
+
     public enum PlayerState
     {
         walking,

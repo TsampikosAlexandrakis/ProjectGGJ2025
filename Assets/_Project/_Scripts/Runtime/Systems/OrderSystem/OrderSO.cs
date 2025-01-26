@@ -17,6 +17,6 @@ public class OrderSO : ScriptableObject
 [System.Serializable]
 public class RecipeOrder
 {
-    public RecipeSO[] recipe;
+    public RecipeSO recipe;
     public int amount;
 }

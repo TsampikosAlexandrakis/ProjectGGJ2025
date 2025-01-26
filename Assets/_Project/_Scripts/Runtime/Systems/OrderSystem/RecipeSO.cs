@@ -17,7 +17,7 @@ public class RecipeSO : ScriptableObject
     public IngredientSO ingredient4;
 
     public GameObject bubblePrefab;
-
+    public Sprite BubbleIcon;
     [Header("Requirements")] 
     public IngredientSO Liquid;
     public IngredientSO Solid;

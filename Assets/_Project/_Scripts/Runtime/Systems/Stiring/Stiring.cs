@@ -39,6 +39,10 @@ public class Stiring : MonoBehaviour,IInteractable
 
     public void Interact()
     {
+        if (CraftManager.Instance.pendingBubble == null)
+        {
+            CraftManager.Instance.CreateANewBubble();
+        }
         
         
         if (progress < SecondsToFinish)

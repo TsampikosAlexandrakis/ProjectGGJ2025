@@ -9,7 +9,7 @@ public class InteractionSystem : MonoBehaviour
     [SerializeField] private GameObject rayStart;
     [SerializeField] private float rayLength;
     [SerializeField] private LayerMask mask;
-    
+    [SerializeField] private LayerMask masksingle;
     GameObject interactable;
 
     private void Awake()
@@ -40,6 +40,32 @@ public class InteractionSystem : MonoBehaviour
                 
                 interactable.GetComponent<IInteractable>().BeginInteraction();
                 if (interactAction.IsPressed())
+                {
+                    
+                    interactable.GetComponent<IInteractable>().Interact();
+                }
+            }
+        }
+        else
+        {
+            if (!interactable) return;
+            if ( interactable.GetComponent<IInteractable>() != null)
+            {
+                interactable.GetComponent<IInteractable>().EndInteraction();
+               
+            }
+            interactable = null;    
+
+        }
+        
+        if(Physics.Raycast(ray, out hitinfo, rayLength, masksingle))
+        {
+            if (hitinfo.collider.GetComponent<IInteractable>() != null)
+            {
+                interactable = hitinfo.collider.gameObject;
+                
+                interactable.GetComponent<IInteractable>().BeginInteraction();
+                if (interactAction.WasPressedThisFrame())
                 {
                     
                     interactable.GetComponent<IInteractable>().Interact();

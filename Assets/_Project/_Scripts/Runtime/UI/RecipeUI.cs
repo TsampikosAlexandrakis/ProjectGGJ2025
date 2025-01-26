@@ -10,7 +10,12 @@ public class RecipeUI : MonoBehaviour,  IInteractable
     public VerticalLayoutGroup recipesLayoutGroup;
     public GameObject reqUI;
     private int recipeCounter = -1;
-    
+
+    private void Start()
+    {
+        SetRecipe();
+    }
+
     public void SetRecipe()
     {
         ClearGroup();
@@ -37,11 +42,7 @@ public class RecipeUI : MonoBehaviour,  IInteractable
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            //Todo
-            SetRecipe();
-        }
+
     }
   
     private void ClearGroup()

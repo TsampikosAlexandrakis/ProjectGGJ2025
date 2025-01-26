@@ -67,6 +67,7 @@ public class Stiring : MonoBehaviour,IInteractable
     public void Finished()
     {
         CraftManager.Instance.AddToPendingBubble(currentIngredient);
+        progress = 0;
     }
     
     public void EndInteraction()

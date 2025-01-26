@@ -19,7 +19,7 @@ MonoBehaviour:
   ingredient3: {fileID: 0}
   ingredient4: {fileID: 0}
   bubblePrefab: {fileID: 8157897818234291375, guid: d15816bad3bc15349b1b2605f55b51ae, type: 3}
-  BubbleIcon: {fileID: 0}
+  BubbleIcon: {fileID: 21300000, guid: de62064fc9ab0bd42ba2c04e56a74453, type: 3}
   Liquid: {fileID: 11400000, guid: 902752139d25cd549bab9387d4638739, type: 2}
   Solid: {fileID: 11400000, guid: 64fda507205c83f40bd3cabbe3f20628, type: 2}
   Air: {fileID: 11400000, guid: 986cf7162908f5445b08041e8e9fdf04, type: 2}

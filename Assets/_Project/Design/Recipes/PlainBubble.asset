@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 387230b660fb8cf4db20ea15a8930c02, type: 3}
   m_Name: PlainBubble
   m_EditorClassIdentifier: 
-  RecipeName: PlainBubble
+  RecipeName: Plain Bubble
   hashID: 2023552199
   ingredient1: {fileID: 0}
   ingredient2: {fileID: 0}

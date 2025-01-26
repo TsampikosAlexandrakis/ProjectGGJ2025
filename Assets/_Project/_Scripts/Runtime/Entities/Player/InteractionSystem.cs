@@ -19,6 +19,7 @@ public class InteractionSystem : MonoBehaviour
 
     private void Update()
     {
+        
         InteractionHandler();
         
     }
@@ -44,8 +45,13 @@ public class InteractionSystem : MonoBehaviour
         }
         else
         {
-            interactable.GetComponent<IInteractable>().EndInteraction();
-            interactable = null;
+            if (!interactable) return;
+            if ( interactable.GetComponent<IInteractable>() != null)
+            {
+                interactable.GetComponent<IInteractable>().EndInteraction();
+               
+            }
+            interactable = null;    
 
         }
     }

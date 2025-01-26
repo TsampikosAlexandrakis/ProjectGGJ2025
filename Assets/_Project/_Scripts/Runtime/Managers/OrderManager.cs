@@ -24,6 +24,8 @@ public class OrderManager : MonoBehaviour
 
     public void Start()
     {
+        FindFirstObjectByType<MainUIHandler>().Init();
+
         Init();
     }
 

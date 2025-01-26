@@ -11,9 +11,13 @@ public class MainUIHandler : MonoBehaviour
    public TMP_Text timerText;
    public void Start()
    {
-       OrderManager.Instance.OnNewOrder += OnNewOrder;
+       
    }
 
+   public void Init()
+   {
+       OrderManager.Instance.OnNewOrder += OnNewOrder;
+   }
    private void ClearGroup()
    {
        foreach (Transform o in recipesLayoutGroup.transform)
@@ -28,6 +32,7 @@ public class MainUIHandler : MonoBehaviour
    }
    private void OnNewOrder(OrderSO obj)
    {
+       Debug.Log("First ORder");
        ClearGroup();
        
        recipesText.text = "";

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hashID: -604201745
   Name: Oxygen
-  IngredientIcon: {fileID: 0}
+  IngredientIcon: {fileID: 21300000, guid: d919c5337b252a5488e9255c9c83c685, type: 3}
   IngredientType: 2

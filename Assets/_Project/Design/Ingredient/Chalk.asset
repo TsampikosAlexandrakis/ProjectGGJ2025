@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hashID: 1168259957
   Name: Chalk
-  IngredientIcon: {fileID: 0}
+  IngredientIcon: {fileID: 21300000, guid: beedad08684872749a729d78429acbab, type: 3}
   IngredientType: 1

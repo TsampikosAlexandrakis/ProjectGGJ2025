@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hashID: 1347332532
   Name: Oil
-  IngredientIcon: {fileID: 0}
+  IngredientIcon: {fileID: 21300000, guid: caf77ec3c41cc9f4896300aa43234552, type: 3}
   IngredientType: 0

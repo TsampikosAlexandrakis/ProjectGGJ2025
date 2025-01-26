@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Stiring : MonoBehaviour,IInteractable
 {
@@ -6,6 +8,8 @@ public class Stiring : MonoBehaviour,IInteractable
     public float SecondsToFinish;
     public float progress;
 
+    public Image ProgressBar;
+    
     public GameObject ladle;
     
     public void BeginInteraction()
@@ -29,6 +33,11 @@ public class Stiring : MonoBehaviour,IInteractable
             Finished();
         }
         
+    }
+
+    private void Update()
+    {
+        ProgressBar.fillAmount = progress/SecondsToFinish;
     }
 
     public void Finished()

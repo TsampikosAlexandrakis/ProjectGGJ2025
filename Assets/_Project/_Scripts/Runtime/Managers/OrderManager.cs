@@ -100,7 +100,7 @@ public class OrderManager : MonoBehaviour
         if (isRunning)
         {
             timer -= Time.deltaTime;
-            Debug.Log(timer);
+            //Debug.Log(timer);
             if (timer <= 0)
             {
                 isRunning = false;

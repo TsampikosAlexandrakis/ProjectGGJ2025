@@ -41,16 +41,16 @@ public class CraftManager : MonoBehaviour
     
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            IngredientSO[] ingredientSos = Resources.LoadAll<IngredientSO>("");
-            AddToPendingBubble(ingredientSos[Random.Range(0,ingredientSos.Length)]);
-            CheckRecipe();
-        }
-
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            CreateANewBubble();
-        }
+        // if (Input.GetKeyDown(KeyCode.A))
+        // {
+        //     IngredientSO[] ingredientSos = Resources.LoadAll<IngredientSO>("");
+        //     AddToPendingBubble(ingredientSos[Random.Range(0,ingredientSos.Length)]);
+        //     CheckRecipe();
+        // }
+        //
+        // if (Input.GetKeyDown(KeyCode.K))
+        // {
+        //     CreateANewBubble();
+        // }
     }
 }

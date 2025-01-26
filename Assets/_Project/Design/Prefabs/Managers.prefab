@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8853345317560351500
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6211511735030517300}
+  - component: {fileID: 4995558718808132754}
+  - component: {fileID: 2457359100900883148}
+  - component: {fileID: 9015237274306822948}
+  m_Layer: 0
+  m_Name: Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6211511735030517300
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8853345317560351500}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.081974, y: -6.510591, z: -11.605799}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4995558718808132754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8853345317560351500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0414b8e87cef43e9a4ddd496488f6148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OrderSetupSO: {fileID: 11400000, guid: 9a3530b688c07aa4e8107ef18586fd86, type: 2}
+  pendingOrders: []
+  currentOrder: {fileID: 0}
+  orderCounter: -1
+  score: 0
+  timer: 0
+--- !u!114 &2457359100900883148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8853345317560351500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06fe2a9ff6c7f30409c32a5cd85705fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pendingBubble: {fileID: 0}
+--- !u!114 &9015237274306822948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8853345317560351500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4d3a3f3b3c1459fab09b895a3cf5cb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AllRecipes:
+  - {fileID: 11400000, guid: 857daeee063a01d43b95a2a5bf49bd3f, type: 2}
+  - {fileID: 11400000, guid: b5da5115d82bd6b4b86186be2587ba87, type: 2}
+  - {fileID: 11400000, guid: 659716c7c9502d84bb73eeb8f71ee699, type: 2}
+  - {fileID: 11400000, guid: f0d6faef2fcc2154297c58edb22f64e4, type: 2}
+  - {fileID: 11400000, guid: 7e30d1c85be2572499e1779c885b2671, type: 2}
+  - {fileID: 11400000, guid: db00b1e215808fa429b62cc5d8b4dd42, type: 2}
+  - {fileID: 11400000, guid: bd6084ff473b98e459c228889cc91b43, type: 2}
+  - {fileID: 11400000, guid: 811cf402b9be47741b818fe32bc8daa0, type: 2}

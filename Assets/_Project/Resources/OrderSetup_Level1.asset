@@ -13,8 +13,6 @@ MonoBehaviour:
   m_Name: OrderSetup_Level1
   m_EditorClassIdentifier: 
   Orders:
-  - {fileID: 11400000, guid: a261711199a94234cb62fd0e79f4a91f, type: 2}
-  - {fileID: 11400000, guid: a261711199a94234cb62fd0e79f4a91f, type: 2}
   - {fileID: 11400000, guid: 789b95c6a37d2184eae0dc4405bc58fa, type: 2}
   - {fileID: 11400000, guid: c36aad61ae46aa045a20138bae586ee0, type: 2}
   - {fileID: 11400000, guid: 1f29df24b8a7ea142ac1d87f59a2ac17, type: 2}

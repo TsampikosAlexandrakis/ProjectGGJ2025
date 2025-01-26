@@ -1,13 +1,14 @@
 ﻿
 using System.Collections.Generic;
+using AYellowpaper.SerializedCollections;
 using UnityEngine;
 using UnityEngine.UI;
 
 
 public class Hatch : MonoBehaviour
 {
-    
-    public Dictionary<RecipeSO, int> BubblesContained;
+    [SerializedDictionary]
+    public SerializedDictionary<RecipeSO, int> BubblesContained;
     private void OnTriggerStay(Collider other)
     {
         

@@ -45,7 +45,8 @@ public class PlayerController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -72,6 +73,7 @@ public class PlayerController : MonoBehaviour
         _moveVector = transform.forward * _moveVector.z + transform.right * _moveVector.x;
         
         _characterController.Move(_moveVector * speed * Time.deltaTime);
+        _characterController.Move(Vector3.down * 400f * Time.deltaTime); 
     }
     
     private void MouseHandler()

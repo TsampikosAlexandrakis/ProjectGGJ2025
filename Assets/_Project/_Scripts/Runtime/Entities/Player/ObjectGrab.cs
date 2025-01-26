@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 public class ObjectGrab : MonoBehaviour
@@ -9,7 +10,17 @@ public class ObjectGrab : MonoBehaviour
     [SerializeField] private LayerMask mask;
     
     public GameObject grabableObject;
+
+    private void Start()
+    {
+        interactAction.Enable();
+    }
     
+    private void Update()
+    {
+        InteractionHandler();
+    }
+
     void InteractionHandler()
     {
         Ray ray = new Ray(rayStart.transform.position, rayStart.transform.forward);
@@ -20,17 +31,23 @@ public class ObjectGrab : MonoBehaviour
             if (hitinfo.collider.GetComponent<IGrabable>() != null)
             {
                 grabableObject = hitinfo.collider.gameObject;
-                if (interactAction.IsPressed())
+                Debug.Log(grabableObject.name);
+                if (interactAction.WasPressedThisFrame())
                 {
-
-                    if (grabableObject.gameObject.GetComponent<IGrabable>().IsGrabbed == false)
+                    Debug.Log("grabbed");
+                    
+                    if (grabableObject.GetComponent<IGrabable>().IsGrabbed == true)
+                    {
+                        grabableObject.GetComponent<IGrabable>().IsGrabbed = false;
+                        grabableObject.GetComponent<IGrabable>().Release();
+                        grabableObject = null;
+                    }
+                    if (grabableObject.GetComponent<IGrabable>().IsGrabbed == false)
                     {
                         grabableObject.GetComponent<IGrabable>().Grab();
+                        grabableObject.GetComponent<IGrabable>().IsGrabbed = true;
                     }
-                    else
-                    {
-                        grabableObject.GetComponent<IGrabable>().Release();
-                    }
+                   
                 }
             }
         }

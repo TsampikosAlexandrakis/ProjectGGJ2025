@@ -6,39 +6,52 @@ public class TestGrabable : MonoBehaviour, IGrabable
 
     public float atractionforce;
     
-    private bool isGrabbed = false;
+    public bool isGrabbed = false;
 
     public bool IsGrabbed
     {
-        get { return isGrabbed; }
-        set { isGrabbed = value; }
+        get => isGrabbed;
+        set => isGrabbed = value;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (IsGrabbed)
+        if (isGrabbed)
         {
-            rb.AddForce(PlayerController.instance.grabPoint.position *atractionforce, ForceMode.Impulse );
+            moveObject();
         }
-        
     }
 
+    void moveObject()
+    {
+        if (Vector3.Distance(rb.transform.position, PlayerController.instance.grabPoint.position) > 0.1f)
+        {
+            Vector3 moveDirection = (PlayerController.instance.grabPoint.position - transform.position);
+
+            rb.AddForce(moveDirection * atractionforce * Time.deltaTime);
+        }
+    }
+    
     public void Grab()
     {
-        if (!isGrabbed)
-        {
-            IsGrabbed = true;
-        }
+        rb.useGravity = false;
+        rb.linearDamping = 5;
+        rb.constraints = RigidbodyConstraints.FreezeRotation;
+
+        rb.transform.parent = PlayerController.instance.grabPoint;
+        isGrabbed = true;
         
     }
 
     public void Release()
     {
-        if (isGrabbed)
-        {
-            IsGrabbed = false;
-        }
+        rb.useGravity = true;
+        rb.linearDamping = 1;
+        rb.constraints = RigidbodyConstraints.None;
+
+        rb.transform.parent = null;
+        isGrabbed = false;
         
     }
 

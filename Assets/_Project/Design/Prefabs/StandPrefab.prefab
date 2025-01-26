@@ -383,7 +383,7 @@ GameObject:
   m_Component:
   - component: {fileID: 128786794803605532}
   - component: {fileID: 8217503148098060668}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: RecipeReqs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -430,7 +430,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 1
-  m_Spacing: 0
+  m_Spacing: 2
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1

@@ -37,7 +37,7 @@ public class InteractionSystem : MonoBehaviour
             if (hitinfo.collider.GetComponent<IInteractable>() != null)
             {
                 interactable = hitinfo.collider.gameObject;
-
+                Crosshair.instance.ToggleInteractUI(true);
                 interactable.GetComponent<IInteractable>().BeginInteraction();
                 if (interactAction.WasPressedThisFrame())
                 {
@@ -51,7 +51,7 @@ public class InteractionSystem : MonoBehaviour
             if (hitinfo.collider.GetComponent<IInteractable>() != null)
             {
                 interactable = hitinfo.collider.gameObject;
-
+                Crosshair.instance.ToggleInteractUI(true);
                 interactable.GetComponent<IInteractable>().BeginInteraction();
                 if (interactAction.IsPressed())
                 {
@@ -62,6 +62,7 @@ public class InteractionSystem : MonoBehaviour
         }
         else
         {
+            Crosshair.instance.ToggleInteractUI(false);
             if (!interactable) return;
             if (interactable.GetComponent<IInteractable>() != null)
             {

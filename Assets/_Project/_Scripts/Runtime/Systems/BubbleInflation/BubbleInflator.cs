@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +8,14 @@ public class BubbleInflator : MonoBehaviour, IInteractable
     public float Inflationrate;
     
     public Image progressBar;
+
+    
+    
+    public void Start()
+    {
+        bubble.bubbleRecipe = CraftManager.Instance.pendingBubble;
+    }
+
     public void BeginInteraction()
     {
         
@@ -29,8 +38,11 @@ public class BubbleInflator : MonoBehaviour, IInteractable
         {
             progressBar.fillAmount = (bubble.size/bubble.maxSize) /100f * Time.deltaTime;
         }
-        
-        
+
+        if (bubble != null)
+        {
+            Instantiate(bubble.bubbleRecipe, transform.position, transform.rotation);
+        }
 
         if (bubble == null)
         {

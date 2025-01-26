@@ -7,8 +7,8 @@ public class Bubble : MonoBehaviour
     
     public float minSize;
     public float maxSize;
-    
-    
+
+    public Rigidbody rb;
     public float size;
     public bool Popped = false;
     private void Update()
@@ -27,6 +27,8 @@ public class Bubble : MonoBehaviour
         {
             Pop();
         }
+
+
     }
 
     public void Inflate(float inflationRate)
@@ -38,7 +40,7 @@ public class Bubble : MonoBehaviour
 
     private void Pop()
     {
-        Destroy(gameObject);
+        rb.AddForce(Vector3.up * 0.005f, ForceMode.Impulse);
     }
     
 }
